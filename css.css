@@ -1,46 +1,86 @@
-body {
-    min-height: 100vh;
+:root {
+    --primary-color: #2c3e50;  
+    --accent-color: #e74c3c;     
+    --bg-color: #f4f7f6;        
+    --card-bg: #ffffff;        
+    --text-dark: #333333;
+}
+* {
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: black;
-    color: aqua;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
-header {
-    font-size: x-large;
+.main-header {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
     text-align: center;
-    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-header a {
+.main-header a {
+    color: white;
     text-decoration: none;
-    color: rgb(238, 238, 243);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
 }
-header a:hover {
-    color: aqua;
-    text-shadow: 0 0 8px aqua;
-    transition: 0.3s;
+.main-header a:hover {
+    color: var(--accent-color);
 }
-main {
+.dashboard-content {
+    flex: 1; 
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+.box-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .box {
-    border: 2px solid aqua;
-    padding: 30px 10px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    width: 280px;
     text-align: center;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.box h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.box-card:hover .box {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    border-color: var(--accent-color);
+    background-color: #fffafa;
+}
+.box-card:hover h2 {
+    color: var(--accent-color);
 }
 footer {
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
+    padding: 1.5rem;
+    background-color: #eee;
+    font-size: 0.9rem;
+    color: #666;
 }

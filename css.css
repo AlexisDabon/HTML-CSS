@@ -4,55 +4,49 @@
     --bg: #1a1a1a;       
     --card: #040404;        
     --text: #218f8f; 
-    --shadow: 0 4px 6px rgba(0,0,0,0.3);
+    --shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-.main-header, footer {
-    padding: 1.5rem;
-    text-align: center;
-    background-color: var(--primary);
-}
 .main-header {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    background-color: var(--primary);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #222;
 }
-.main-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: color 0.3s;
+.main-header h1 {
+    font-weight: 300;
+    letter-spacing: 4px;
+    font-size: 1.5rem;
 }
-.main-header a:hover {
-    color: var(--accent);
+.main-header h1 span {
+    font-weight: 800;
+    color: #fff;
 }
 .dashboard-content {
     flex: 1; 
-    display: grid;
-    place-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
 }
-
 .container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 .box-card {
     text-decoration: none;
@@ -60,27 +54,29 @@ body {
 }
 .box {
     background-color: var(--card);
-    border-radius: 12px;
-    padding: 3rem 2rem;
-    width: 280px;
+    border-radius: 8px;
+    padding: 3.5rem 2rem;
+    width: 260px;
     text-align: center;
-    border: 1px solid #333; /* Remplacé #ddd (trop clair) par un gris sombre */
+    border: 1px solid #333;
     box-shadow: var(--shadow);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s ease;
 }
 .box h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .box-card:hover .box {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: var(--accent);
-    background-color: #080808; /* Légèrement plus clair que le fond initial, pas blanc ! */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    background-color: #080808;
+    box-shadow: 0 10px 25px rgba(33, 143, 143, 0.2);
 }
 footer {
-    margin-top: auto;
-    font-size: 0.9rem;
-    color: #555;
-    border-top: 1px solid #222;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #444;
+    background-color: var(--primary);
 }

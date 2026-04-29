@@ -1,7 +1,10 @@
 # Mon Lab HTML-CSS
 
 **Premiers pas en développement web**
-**En autodidacte**
+
+**En autodidacte depuis Janvier 2026**
+
+
 
 
 
